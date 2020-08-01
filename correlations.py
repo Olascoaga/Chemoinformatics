@@ -47,5 +47,5 @@ corrMatrix = dfs.corr()
 sns.heatmap(corrMatrix, annot=False)
 plt.savefig('results\CorrMatrix.png')
 plt.show()
-corrMatrix = corrMatrix.where(np.tril(np.ones(corrMatrix.shape), -1).astype(np.bool)) # Obtenemos el triangulo superior de la matriz
+corrMatrix = corrMatrix.where(np.tril(np.ones(corrMatrix.shape)).astype(np.bool)) # Obtenemos el triangulo superior de la matriz
 corrMatrix.to_csv('results\CorrMatrix.csv')
