@@ -13,7 +13,7 @@ import urllib.request
 
 csv_files = glob.glob('*.csv') # Especificamos un patron de busqueda de archivos
 
-mol_names = [] # Variable en donde guardaremos el nombre de los fingerprints 
+mol_names = [] 
 for filename in csv_files:
     mol_names.append(filename.split(".csv")[0]) # Separamos el nombre de la extensión .csv
 
